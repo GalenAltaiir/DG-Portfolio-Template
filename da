@@ -1,5 +1,6 @@
 html, body{
     height: 100%;
+    background-color: black;
 }
 
 /* TYPOGRAPHY */
@@ -15,22 +16,22 @@ h1, .logo{
 }
 
 h2{
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 600;
 }
 
 h3{
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 600;
 }
 
 p{
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .sub-p{
     font-weight: 100;
-    font-size: .9em;
+    font-size: .7em;
 }
 
 a{
@@ -50,22 +51,6 @@ a{
     --teritary-alt: #4E9E16;
 
     --text: white;
-}
-
-/**********************/
-/* BUTTONS */
-
-.btn{
-    padding: 10px;
-    background-color: var(--secondary);
-    border: none;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.btn-primary{
-    background-color: var(--primary);
 }
 
 /**************************************************************/
@@ -107,7 +92,7 @@ body{
     grid-template-columns: 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% ;
     grid-template-areas:
     "head head head head head head head head head head head head "
-    ". main main main main main main main main main main ."
+    "main main main main main main main main main main main main"
     "foot foot foot foot foot foot foot foot foot foot foot foot";
     }
 }
@@ -232,20 +217,18 @@ footer{
     width: 100%;
     text-align: center;
     color: white;
-    padding: 0;
 }
 
 footer > .nav > a{
     font-size: 0.8em;
     text-align: center;
     display: block;
-    
 }
 footer > small{
     background-color:var(--secondary);
     display: block;
     text-align: center;
-    padding: 0;
+    
 }
 
 @media only screen and (min-width: 768px){

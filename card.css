@@ -1,0 +1,28 @@
+main{
+    display: grid;
+    grid-template-columns: 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333%;
+    min-height: 100vh;
+}
+
+
+
+article{
+    grid-column-start: 2;
+}
+
+img{
+    grid-column-start: 2;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: calc(100% * 9);
+}
+
+.card{
+    position: relative;
+    top: 25%;
+
+    grid-column-start: 7;
+    grid-column-end: 12;
+    background-color: green;
+}

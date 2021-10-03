@@ -10,22 +10,33 @@
 
     <title>Document</title>
 
-    <link rel="stylesheet" href="css/typography.css">
 </head>
 <body>
-    <h1>
-        Heading 1
-    </h1>
+    <main>
+        <article>
+            <h1>Test</h1>
+        </article>
+    </main>
 
-    <h2>
-        Heading 2
-    </h2>
+    <style>
 
-    <h3>
-        Heading 3
-    </h3>
+        main{
+            margin: 0;
+            display: grid;
+            grid-template-columns: 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% ;
+            grid-template-areas:
+            "head head head head head head head head head head head head "
+            "main main main main main main main main main main main main"
+            "foot foot foot foot foot foot foot foot foot foot foot foot";
+        }
 
-    <p>Paragraph</p>
-    <p class="sub-p">Sub Paragraph</p>
+        article{
+            position: inherit;
+            display: grid;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+    </style>
 </body>
 </html>
