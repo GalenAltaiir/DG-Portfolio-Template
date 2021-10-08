@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">        
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9880171930.js" crossorigin="anonymous"></script>
 
     <script src="js/nav.js" async></script>
 
@@ -29,16 +30,16 @@
         </nav>
             
         <a href="javascript:void(0);" class="icon" onclick="slide()">
-               <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"></i>
         </a>
     </header>
 
 
     <main>
     <!-- HERO -->
-        <article class="hero primary">
-           
+        <section class="hero primary">
             
+
 
                 <p><small  class="tag">Full-Stack Developer</small></p>
                 <h1 class="hero-text">Hi, My Name is<br> Damian Glen</h1>
@@ -46,9 +47,9 @@
                 
                 <p class="sub-p"><a href="#about-me" class = "about-me">About Me</a> - <a href="#" class = "my-projects">My Projects</a></p>
                 <i id = "scroll-down"class="fa fa-arrow-down" aria-hidden="true"></i>
-        </article>
+        </section>
     <!-- About -->
-        <article>
+        <section>
             <div class="background-image"></div>
             <div class="text-block">
                 <p class="sub-p tag">Web Games and Tech</p>
@@ -59,10 +60,10 @@
                 <p>I'm excited to develop myself, and share those experiences on this website. I want to make amazing things for amazing people, and work with big names in the industry such as Activision Blizzard, Logitech, Razer or CDPR.</p>
                 <p>I want to create tools and experiences for people, making their lives easier, and get people who aren't familiar into gaming, into them.</p>
             </div>
-        </article>
+        </section>
     <!-- KYODAI -->
 
-    <article>
+    <section>
         <div class="background-image"></div>
         <div class="text-block">
 
@@ -75,11 +76,11 @@
             <p>"Kyodai" was taken from the Japanese word "Kyuodai" - meaning, "brothers". Meanwhile the word "Kishi" refers to a knight, which we thought just sounded cool, and gave nice continuity to the name. 
                 Now whenever I do any work personally, or we work together, we use Kishi Kyodai, or Kyodai, as our brand name.</p>
         </div>
-    </article>
+    </section>
 
 
     <!-- Contact - Work -->
-        <article>
+        <section>
             <div class="background-image"></div>
             <div class="text-block">
 
@@ -95,21 +96,74 @@
                 <br>
                 <a href="#" class = "btn">Contact</a>
             </div>
-        </article>
+        </section>
 
         <!--Projects-->
 
-        <article>
-            <h2>Projects</h2>
-        </article>
-        <article>
-            <h2>Latest Post</h2>
-        </article>
-        <article>
+        <section id = "projects">
+            <div class="card">
+                <div class="card-img"><a href="#" class="img-link"></a></div>
+                <div class="card-text">
+                    <h4>Project Name</h4>
+                    <p class="sub-p">HTML, CSS, JS, PHP, MySQL</p>
+                    <a href="#" class="btn btn-primary">Live Preview</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img"><a href="#" class="img-link"></a></div>
+                <div class="card-text">
+                    <h4>Project Name</h4>
+                    <p class="sub-p">HTML, CSS, JS, PHP, MySQL</p>
+                    <a href="#" class="btn btn-primary">Live Preview</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img"><a href="#" class="img-link"></a></div>
+                <div class="card-text">
+                    <h4>Project Name</h4>
+                    <p class="sub-p">HTML, CSS, JS, PHP, MySQL</p>
+                    <a href="#" class="btn btn-primary">Live Preview</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img"><a href="#" class="img-link"></a></div>
+                <div class="card-text">
+                    <h4>Project Name</h4>
+                    <p class="sub-p">HTML, CSS, JS, PHP, MySQL</p>
+                    <a href="#" class="btn btn-primary">Live Preview</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LATEST POSTS -->
+
+        <section>
+            <div class="background-image latest" style="background-image: url('/img/bf.png');"></div>
+            <div class="text-block latest-text">
+
+                <p class="sub-p tag">08/10/2021</p>
+
+                <h3>Battlefield 2042 cheaters won't have anywhere to hide thanks to new tool</h3>
+
+                <p> 
+                    Battlefield 2042 developer EA Dice has revealed its new player reporting system alongside its plans to combat cheaters in the upcoming FPS...
+
+                    In a blog post, EA Dice laid out Battlefield 2042's "Positive Play" features, Community Charter, and Reporting tools, as well as the "Fair Play measures" the developer has...
+                </p>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+        </section>
+        
+        <!--CONTACT-->
+
+        <section>
             <h2>Contact Form</h2>
-        </article>
+        </section>
 
-
+    </main>
 
     <footer>
         <div class = "nav">
@@ -121,7 +175,7 @@
         <small>© KISHI KYODAI | All Rights Reserved</small>
     </footer>
 
-    </main>
+    
 
 
 

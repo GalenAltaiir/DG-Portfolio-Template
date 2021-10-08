@@ -5,14 +5,14 @@ html, body{
 
 
 /* TYPOGRAPHY */
-h1, h2, h3, p, .sub-p, a, .logo, small{
+h1, h2, h3, h4, p, .sub-p, a, .logo, small{
     font-family: 'Montserrat', sans-serif;
     color: var(--text);
 }
 
-h1, .logo{
- font-size: 2.5em;
- font-weight: 800;
+h1, .logo {
+    font-size: 2.5rem;
+    font-weight: 800;
 
 }
 
@@ -23,6 +23,11 @@ h2{
 
 h3{
     font-size: 1.5em;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 1.25em;
     font-weight: 600;
 }
 
@@ -55,7 +60,7 @@ a{
 }
 
 /**********************/
-/* BUTTONS */
+/* BUTTONS & ICONS */
 
 .btn{
     padding: 10px;
@@ -68,6 +73,12 @@ a{
 
 .btn-primary{
     background-color: var(--primary);
+}
+
+.fa-arrow-right{
+    float: right;
+    color: var(--primary);
+    font-size: 1.5em;
 }
 
 /**************************************************************/
@@ -86,7 +97,7 @@ body {
     "main"
     "foot";
     
-  }    
+}    
 
 /* TABLET */
 @media only screen and (min-width: 768px){
@@ -98,7 +109,7 @@ body {
         "head head head head"
         "main main main main"
         "foot foot foot foot";
-      }    
+        }    
 }
 
 /* DESKTOP */
