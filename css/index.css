@@ -3,6 +3,10 @@ html, body{
     padding: 0;
 }
 
+h2{
+    text-align: center;
+}
+
 
 /*******************************/
 /* Hero Section */
@@ -280,6 +284,7 @@ section:nth-child(odd) > .text-block{
     grid-column-start: 4;
     grid-column-end: 7;
     margin: 0;
+    position: relative;
         }
 
 }
@@ -303,4 +308,39 @@ section:nth-child(odd) > .text-block{
         margin: 0;
 
 }
+}
+/* Selecting OTHER POSTS grid specifically*/
+section:nth-child(7){
+    grid-template-rows:none;
+}
+
+.posts{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: var(--background-color-alt);
+    grid-column-start: 1;
+    grid-column-end: 7;
+    position: relative;
+    min-height: 20vh;
+    padding: 15px;
+}
+
+
+@media only screen and (min-width: 992px){
+    .posts{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background-color: var(--background-color-alt);
+        grid-column-start: 2;
+        grid-column-end: 12;
+        position: relative;
+        min-height: 20vh;
+        padding: 15px;
+    }
+}
+
+.fa-arrow-right{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
 }
