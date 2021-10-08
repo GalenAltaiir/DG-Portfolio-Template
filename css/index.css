@@ -182,6 +182,7 @@ section:nth-child(odd) > .text-block{
 
 /* PROJECTS */
 #projects{
+    margin: 2em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -295,7 +296,7 @@ section:nth-child(odd) > .text-block{
 .latest{
     grid-row-start: 3;
         grid-row-end: 9;
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-column-end: 11;
         margin: 0;
 }
@@ -309,38 +310,87 @@ section:nth-child(odd) > .text-block{
 
 }
 }
-/* Selecting OTHER POSTS grid specifically*/
-section:nth-child(7){
-    grid-template-rows:none;
-}
-
-.posts{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: var(--background-color-alt);
-    grid-column-start: 1;
-    grid-column-end: 7;
-    position: relative;
-    min-height: 20vh;
-    padding: 15px;
-}
-
-
-@media only screen and (min-width: 992px){
-    .posts{
-        margin-top: 15px;
-        margin-bottom: 15px;
-        background-color: var(--background-color-alt);
-        grid-column-start: 2;
-        grid-column-end: 12;
-        position: relative;
-        min-height: 20vh;
-        padding: 15px;
-    }
-}
 
 .fa-arrow-right{
     position: absolute;
     bottom: 15px;
     right: 15px;
 }
+
+
+/* CONTACT */
+.contact{
+    display: grid;
+    justify-content: center;
+    background-image: url('/img/background-5060836_1920.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+form{
+    margin: 15px;
+    padding: 2em;
+    background-color: var(--background-color-alt);
+    grid-column-start: 2;
+    grid-column-end: 12;
+    display: grid;
+    max-width: 60vw;
+    grid-template-columns: 50% 50%;
+}
+
+form > h3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+form b{
+    color: red;
+}
+
+
+label{
+    margin: 15px;
+}
+
+input{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--primary);
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 1px solid var(--secondary);
+    transition: all 0.3s;
+}
+
+textarea:focus{
+    outline: none;
+    border: 1px solid var(--secondary);
+    transition: all 0.3s;
+}
+
+.input-long{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+input[type=submit]{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+textarea{
+    margin: 15px;
+    border: none;
+    background-color: transparent;
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    resize: none;
+}
+
+
