@@ -11,10 +11,13 @@
 
     <script src="js/nav.js" async></script>
 
-    <title>Home</title>
+    <title>KYODAI | Home</title>
 
     <link rel="stylesheet" href="css/config.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/animations-ie-fix.css">
 </head>
 <body>
 
@@ -24,8 +27,8 @@
         <nav id = "nav" class = "nav">
             <a href="index.html" class="nav-link">HOME</a>
             <a href="blog.html" class="nav-link">BLOG</a>
-            <a href="" class="nav-link">PROJECTS</a>
-            <a href="" class="nav-link git">GITHUB</a> 
+            <a href="portfolio.html" class="nav-link">PROJECTS</a>
+            <a href="https://github.com/GalenAltaiir" class="nav-link git">GITHUB</a> 
         </nav>
             
         <a href="javascript:void(0);" class="icon" onclick="slide()">
@@ -105,9 +108,9 @@
                 
         </section>
     <!-- About -->
-        <section id = "about">
-            <div class="background-image"></div>
-            <div class="text-block">
+        <section id = "about" class = "animatedParent animateOnce">
+            <div class="background-image animated fadeInLeft"></div>
+            <div class="text-block animated fadeInUp">
                 <p class="sub-p tag">Web Games and Tech</p>
 
                 <h3>About Me</h3>
@@ -119,9 +122,9 @@
         </section>
     <!-- KYODAI -->
 
-    <section>
-        <div class="background-image"></div>
-        <div class="text-block">
+    <section class = "animatedParent animateOnce">
+        <div class="background-image animated fadeInLeft"></div>
+        <div class="text-block animated fadeInUp">
 
             <p class="sub-p tag">Origin Story</p>
 
@@ -136,9 +139,9 @@
 
 
     <!-- Contact - Work -->
-        <section>
-            <div class="background-image"></div>
-            <div class="text-block">
+        <section class="animatedParent animateOnce">
+            <div class="background-image animated fadeInLeft"></div>
+            <div class="text-block animated fadeInUp">
 
                 <p class="sub-p tag">But that's enough about me...</p>
 
@@ -146,7 +149,7 @@
 
                 <p> I think that's about it when it comes to me. If you'd like to see some of the projects I've done and worked on, then feel free to go ahead.</p>
                 <br>
-                <a href="#"class = "btn btn-primary">Projects</a>
+                <a href="portfolio.html"class = "btn btn-primary">Projects</a>
                 <br><br>
                 <p>On the other hand, if you'd like to tell me about yourself, feel free to! Alternatively, if you'd like to work together you can also use this button.</p>
                 <br>
@@ -156,8 +159,8 @@
 
         <!--Projects-->
 
-        <section id = "projects">
-            <div class="card">
+        <section id = "projects" class = "animatedParent animateOnce" data-sequence='100'>
+            <div class="card animated bounceInUp" data-id='1'>
                 <div class="card-img"><a href="#" class="img-link"></a></div>
                 <div class="card-text">
                     <h4>Project Name</h4>
@@ -166,7 +169,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card animated bounceInUp"data-id='2'>
                 <div class="card-img"><a href="#" class="img-link"></a></div>
                 <div class="card-text">
                     <h4>Project Name</h4>
@@ -175,7 +178,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card animated bounceInUp" data-id='3'>
                 <div class="card-img"><a href="#" class="img-link"></a></div>
                 <div class="card-text">
                     <h4>Project Name</h4>
@@ -184,7 +187,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card animated bounceInUp" data-id='4'>
                 <div class="card-img"><a href="#" class="img-link"></a></div>
                 <div class="card-text">
                     <h4>Project Name</h4>
@@ -196,10 +199,10 @@
 
         <!-- LATEST POSTS -->
 
-        <section>
-            <div class="background-image latest" style="background-image: url('/img/bf.png');"></div>
-            <div class="text-block latest-text">
-                <a href="#">
+        <section class = "animatedParent animateOnce">
+            <div class="background-image latest animated fadeInRight" style="background-image: url('/img/bf.png');"></div>
+            <div class="text-block latest-text animated fadeInLeftShort">
+                <a href="blog.html">
                     <p class="sub-p tag">08/10/2021</p>
                     
                     <h3><span class = "tag">Latest Post</span><br>Battlefield 2042 cheaters won't have anywhere to hide thanks to new tool</h3>
@@ -216,8 +219,8 @@
         
         <!--CONTACT-->
 
-        <div class = "contact" id = "contact">
-            <form action=”mailto:damianglen98@gmail.com” method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
+        <div class = "contact animatedParent animateOnce" id = "contact">
+            <form class ="animated fadeIn"action=”mailto:damianglen98@gmail.com” method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
                 <h3>Contact Me</h3>
                 
                 <label for="Name">Name <b>*</b></label>
@@ -252,6 +255,7 @@
 
 
 
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src='js/css3-animate-it.js'></script>
 </body>
 </html>

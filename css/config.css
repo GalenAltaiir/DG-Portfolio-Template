@@ -18,30 +18,36 @@ html, body{
 
 
 /* TYPOGRAPHY */
-h1, h2, h3, h4, p, .sub-p, a, .logo, small, label, input, textarea{
+h1, h2, h3, h4, h5, p, .sub-p, a, .logo, small, label, input, textarea{
     font-family: 'Montserrat', sans-serif;
     color: var(--text);
 }
 
+.watermark{
+    font-size: 3rem;
+    opacity: 0.2;
+}
+
 h1, .logo {
     font-size: 2.5rem;
-    font-weight: 800;
 
 }
 
 h2{
     font-size: 2em;
-    font-weight: 600;
 }
 
 h3{
     font-size: 1.5em;
-    font-weight: 600;
 }
 
 h4{
     font-size: 1.25em;
-    font-weight: 600;
+}
+
+h5{
+    font-size: 1em;
+    font-weight: 800;
 }
 
 p{
@@ -49,7 +55,6 @@ p{
 }
 
 .sub-p{
-    font-weight: 100;
     font-size: .9em;
 }
 
@@ -68,9 +73,12 @@ a{
     --secondary-alt: #11249E;
     --teritary: #6CEB15;
     --teritary-alt: #4E9E16;
+    --locked: rgb(250, 81, 81);
 
     --text: white;
 }
+
+
 
 /**********************/
 /* BUTTONS & ICONS */
@@ -88,9 +96,15 @@ a{
     background-color: var(--primary);
 }
 
+.locked{
+    background-color: var(--locked);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 .fa-arrow-right{
-    float: right;
-    color: var(--primary);
+    background-color:var(--primary);
+    color: var(--background-color);
     font-size: 1.5em;
 }
 
@@ -128,14 +142,14 @@ body {
 /* DESKTOP */
 @media only screen and (min-width: 992px) {
 body{
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr) ;
-    grid-template-areas:
-    "head head head head head head head head head head head head "
-    "main main main main main main main main main main main main"
-    "foot foot foot foot foot foot foot foot foot foot foot foot";
-    }
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr) ;
+        grid-template-areas:
+        "head head head head head head head head head head head head "
+        ".... main main main main main main main main main main ...."
+        "foot foot foot foot foot foot foot foot foot foot foot foot";
+        }
 }
 
 main{
@@ -161,6 +175,7 @@ header{
     text-align: center;
     position: sticky;
     top: 0;
+    border-bottom: 3px solid var(--secondary);
 }
     /* HEADER LOGO */
     .logo{
@@ -220,6 +235,9 @@ header{
 /**************************************************************/
 
 /*GENERAL SETTINGS**/
+.tag{
+    color: var(--primary);
+}
 
     .nav-link{
         color: var(--text);
@@ -260,7 +278,6 @@ footer{
     text-align: center;
     color: white;
     padding: 0;
-    height: 10vh;
     display: grid;
 }
 
