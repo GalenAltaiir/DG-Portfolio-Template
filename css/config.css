@@ -117,7 +117,7 @@ body {
     body {
         margin: 0;
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(4, auto);
         grid-template-areas:
         "head head head head"
         "main main main main"
@@ -130,7 +130,7 @@ body {
 body{
     margin: 0;
     display: grid;
-    grid-template-columns: 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% 8.333% ;
+    grid-template-columns: repeat(12, 1fr) ;
     grid-template-areas:
     "head head head head head head head head head head head head "
     "main main main main main main main main main main main main"

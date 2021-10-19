@@ -79,7 +79,7 @@ h2{
 
 .hero, .container{
     position: relative;
-    margin-top: 25vh;
+    padding-top: 25vh;
     text-align: center;
     padding: 10px;
     padding-bottom: 20vh;
@@ -126,8 +126,8 @@ section:nth-child(odd) > .text-block{
 
 @media only screen and (min-width: 768px) {
     section:not(:first-child){
-        grid-template-columns: repeat(6, calc(8.333% * 2));
-        grid-template-rows: repeat(5, 20vh);
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
     }
 
     .background-image{
@@ -181,6 +181,7 @@ section:nth-child(odd) > .text-block{
     }
 
 }
+
 
 /* Desktop */
 
