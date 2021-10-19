@@ -7,7 +7,7 @@ h2{
     text-align: center;
 }
 
-i{
+i:not(:first-child){
     position: absolute;
     right: 0;
     bottom: 0;
@@ -78,7 +78,7 @@ i{
     font-size: 4em;
     color: var(--text);
     position: absolute;
-    bottom: 15px;
+    bottom: 35%;
     left: calc(50% - .75em);
     margin: 15px;
 }
