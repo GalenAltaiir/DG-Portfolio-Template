@@ -1,111 +1,104 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
-  /* Handle */
+/* Handle */
 ::-webkit-scrollbar-thumb {
-    background:var(--primary); 
-    border-radius: 10px;
+  background: var(--primary);
+  border-radius: 10px;
 }
-
 
 /* TYPOGRAPHY */
-h1, h2, h3, h4, h5, p, .sub-p, a, .logo, small, label, input, textarea{
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text);
+h1, h2, h3, h4, h5, p, .sub-p, a, .logo, small, label, input, textarea {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
 }
 
-.watermark{
-    font-size: 3rem;
-    opacity: 0.2;
+.watermark {
+  font-size: 3rem;
+  opacity: 0.2;
 }
 
 h1, .logo {
-    font-size: 2.5rem;
-
+  font-size: 2.5rem;
 }
 
-h2{
-    font-size: 2em;
+h2 {
+  font-size: 2em;
 }
 
-h3{
-    font-size: 1.5em;
+h3 {
+  font-size: 1.5em;
 }
 
-h4{
-    font-size: 1.25em;
+h4 {
+  font-size: 1.25em;
 }
 
-h5{
-    font-size: 1em;
-    font-weight: 800;
+h5 {
+  font-size: 1em;
+  font-weight: 800;
 }
 
-p{
-    font-size: 1em;
+p {
+  font-size: 1em;
 }
 
-.sub-p{
-    font-size: .9em;
+.sub-p {
+  font-size: .9em;
 }
 
-a{
-    text-decoration: none;
-    color: var(--primary)
+a {
+  text-decoration: none;
+  color: var(--primary);
 }
+
 /* COLOR SCHEME */
-
-:root{
-    --background-color: #131313;
-    --background-color-alt:#212121; 
-
-    --primary: #EB7044;
-    --secondary: #2C45EB;
-    --secondary-alt: #11249E;
-    --teritary: #6CEB15;
-    --teritary-alt: #4E9E16;
-    --locked: rgb(250, 81, 81);
-
-    --text: white;
+:root {
+  --background-color: #131313;
+  --background-color-alt:#212121;
+  --primary: #EB7044;
+  --secondary: #2C45EB;
+  --secondary-alt: #11249E;
+  --teritary: #6CEB15;
+  --teritary-alt: #4E9E16;
+  --locked: rgb(250, 81, 81);
+  --text: white;
 }
-
-
 
 /**********************/
 /* BUTTONS & ICONS */
-
-.btn{
-    padding: 10px;
-    background-color: var(--secondary);
-    border: none;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
+.btn {
+  padding: 10px;
+  background-color: var(--secondary);
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
 }
 
-.btn-primary{
-    background-color: var(--primary);
+.btn-primary {
+  background-color: var(--primary);
 }
 
-.locked{
-    background-color: var(--locked);
-    pointer-events: none;
-    cursor: not-allowed;
+.locked {
+  background-color: var(--locked);
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
-.fa-arrow-right{
-    background-color:var(--primary);
-    color: var(--background-color);
-    font-size: 1.5em;
+.fa-arrow-right {
+  background-color: var(--primary);
+  color: var(--background-color);
+  font-size: 1.5em;
 }
 
 /**************************************************************/
@@ -113,194 +106,192 @@ a{
 /**************************************************************/
 /* GRID SETTINGS */
 /* MOBILE */
-
 body {
-    background-color: var(--background-color);
-    margin: 0;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas:
-    "head"
-    "main"
-    "foot";
-    
-}    
+  /* MOBILE */
+  background-color: var(--background-color);
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+      grid-template-areas: "head" "main" "foot";
+  /* TABLET */
+  /* DESKTOP */
+}
 
-/* TABLET */
-@media only screen and (min-width: 768px){
-    body {
-        margin: 0;
-        display: grid;
+@media only screen and (min-width: 768px) {
+  body {
+    -ms-grid-columns: (auto)[4];
         grid-template-columns: repeat(4, auto);
-        grid-template-areas:
-        "head head head head"
-        "main main main main"
-        "foot foot foot foot";
-        }    
+        grid-template-areas: "head head head head" "main main main main" "foot foot foot foot";
+  }
 }
 
-/* DESKTOP */
 @media only screen and (min-width: 992px) {
-body{
-        margin: 0;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr) ;
-        grid-template-areas:
-        "head head head head head head head head head head head head "
-        ".... main main main main main main main main main main ...."
-        "foot foot foot foot foot foot foot foot foot foot foot foot";
-        }
+  body {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: "head head head head head head head head head head head head " ".... main main main main main main main main main main ...." "foot foot foot foot foot foot foot foot foot foot foot foot";
+  }
 }
 
-main{
-    grid-area: main;
-    overflow-x: hidden;
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  overflow-x: hidden;
 }
 
 /**************************************************************/
 /**************************************************************/
 /**************************************************************/
-
-
 /* HEADER */
-header{
-    grid-area: head;
-    z-index: 5;
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head;
+  z-index: 5;
+  background-color: var(--background-color);
+  width: 100%;
+  color: var(--text);
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom: 3px solid var(--secondary);
+  /* HEADER LOGO */
+  /* END OF HEADER LOGO */
 }
 
-header{
-    background-color: var(--background-color);
-    width: 100%;
-    color: var(--text);
-    text-align: center;
-    position: sticky;
-    top: 0;
-    border-bottom: 3px solid var(--secondary);
+header .logo {
+  padding: 10px;
 }
-    /* HEADER LOGO */
-    .logo{
-        padding: 10px;
-    }
 
-    .dot{
-        color: var(--secondary)
-    }
-    /* END OF HEADER LOGO */
+header .dot {
+  color: var(--secondary);
+}
 
-    nav > a{
-        display: block;
-    }
-/* TABLET NAV */
-    @media only screen and (min-width: 768px){
-        nav > a{
-            display: inline-block;
-        }
-    }
-/* DESKTOP NAV */
-    @media only screen and (min-width: 992px){
-        
-        header{
-            grid-template-columns: auto auto auto auto;
-            grid-template-areas: ".... logo nav ....";
-            display: grid;
+header nav > a {
+  display: block;
+  /*TABLET*/
+}
+
+@media only screen and (min-width: 768px) {
+  header nav > a {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: ".... logo nav ....";
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
             align-items: center;
-            justify-items: center ;
-        }
-
-        .logo{
-            grid-area: logo;
-            
-        }
-        
-        nav{
-            grid-area: nav;
-        }
-
-        nav > a{
-            display: inline-block;
-        }
-
-        .icon{
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .hide{
-            opacity: 1;
-            height: auto;
-            font-size: 1em;
-            pointer-events:all;
-        }
-    }
-/**************************************************************/
+    justify-items: center;
+  }
+  header .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: logo;
+  }
+  header nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: nav;
+  }
+  header nav > a {
+    display: inline-block;
+  }
+  header .icon {
+    opacity: 0;
+    pointer-events: none;
+  }
+  header .hide {
+    opacity: 1;
+    height: auto;
+    font-size: 1em;
+    pointer-events: all;
+  }
+}
 
 /*GENERAL SETTINGS**/
-.tag{
-    color: var(--primary);
+.tag {
+  color: var(--primary);
 }
 
-    .nav-link{
-        color: var(--text);
-        text-decoration: none;
-        padding: 5px;
-    }
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  padding: 5px;
+}
 
-    .git{
-        color: var(--primary)
-    }
+.git {
+  color: var(--primary);
+}
 
-    .icon{
-        color: var(--text);
-        position: absolute;
-        font-size: 2em;
-        top: 20px;
-        right: 25px;
-    }
+.icon {
+  color: var(--text);
+  position: absolute;
+  font-size: 2em;
+  top: 20px;
+  right: 25px;
+}
 
+.hide {
+  opacity: 0;
+  height: 0;
+  font-size: 0px;
+  pointer-events: none;
+}
 
-    .hide{
-        opacity: 0;
-        height: 0;
-        font-size: 0px;
-        pointer-events: none;
-    }
 /* END OF HEADER */
-
 /**************************************************************/
 /**************************************************************/
 /* FOOTER */
-
-footer{
-    grid-area: foot;
-    background-color:var(--background-color);
-    position: relative;
-    width: 100%;
-    text-align: center;
-    color: white;
-    padding: 0;
-    display: grid;
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: foot;
+  background-color: var(--background-color);
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
 }
 
-footer > .nav > a{
-    justify-content: center;
-    align-content: center;
-    font-size: 0.8em;
-    padding-top: 15px;
-    text-align: center;
-    display: block;
-    
-}
-footer > small{
-    background-color:var(--secondary);
-    text-align: center;
-    padding: 0;
-    width: 100%;
+footer .nav > a {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 0.8em;
+  padding-top: 15px;
+  text-align: center;
+  display: block;
 }
 
-@media only screen and (min-width: 768px){
-    footer > .nav > a{
-        display: inline-block;
-    }
+footer > small {
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 0;
+  width: 100%;
 }
+
+@media only screen and (min-width: 768px) {
+  footer > .nav > a {
+    display: inline-block;
+  }
+}
+
 /**************************************************************/
 /**************************************************************/
+/*# sourceMappingURL=config.css.map */
